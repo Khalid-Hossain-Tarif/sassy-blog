@@ -1,0 +1,179 @@
+
+@import "mixin";
+@import "variables";
+
+//Background Color
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-light {
+    @include set-background($light-color);
+    border: #ccc 1px solid;
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+  &-succes {
+    @include set-background($success-color);
+  }
+  &-white {
+    @include set-background($white-color);
+  }
+}
+
+
+//Buttons
+.btn {
+  display: inline-block;
+  background: $primary-color;
+  color: $light-color;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background: $secondary-color;
+    color: $white-color !important;
+  }
+
+  i {
+    padding-right: 4px;
+  }
+}
+
+.primary-btn {
+  @include set-background($primary-color);
+  &:hover {
+    background: $secondary-color;
+  }
+}
+.dark-btn {
+  @include set-background($dark-color);
+  &:hover {
+    background: lighten($dark-color, 5%);
+  }
+}
+.light-btn {
+  @include set-background($light-color);
+  &:hover {
+    background: lighten($primary-color, 5%);
+  }
+}
+.danger-btn {
+  @include set-background($danger-color);
+  &:hover {
+    background: lighten($danger-color, 5%);
+  }
+}
+.success-btn {
+  @include set-background($success-color);
+  &:hover {
+    background: lighten($success-color, 5%);
+  }
+}
+.border-btn {
+  background: transparent;
+  color: $secondary-color;
+  @include bordered($color: $grey-color);
+}
+
+.read-more-btn {
+  text-decoration: underline;
+  font-size: 0.875rem;
+}
+
+
+//Backgroud-Image Overlay
+.background-img-overlay {
+  @include bg-overlay();
+  @include set-transition();
+
+  a, h1, h2, h3, h4, h5, h6,
+  .blog-meta .author {
+    color: $white-color !important;
+  }
+  .blog-meta {
+    a {
+      color: $light-color;
+    }
+  }
+}
+.background-img-overlay.background-img-overlay a:hover {
+  color: #d695ab !important;
+}
+
+
+//Display FLex
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+//Section Separator
+.section-separator {
+  background: #f1f1f2;
+  width: 100%;
+  height: 1px;
+  margin: 2.5rem 0;
+}
+
+
+//Blockquote
+.blockquote {
+  padding: 30px;
+  border-left: 3px solid $grey-color;
+  box-shadow: 0 0 20px #070e1b12;
+}
+
+//Separator Heading
+.separator-heading {
+  margin-bottom: 1rem;
+
+  .heading-border {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1px;
+    background: #f1f1f2;
+    margin-top: 0.3rem;
+  }
+  .section-heading {
+    position: relative;
+    width: max-content;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #7c0029;
+      position: absolute;
+      top: 33px;
+      z-index: 1;
+    }
+  }
+}
+
+//Page Container
+.page-container {
+  max-width: 1280px;
+  margin: 2rem auto;
+  background: $white-color;
+  min-height: 100vh;
+}
+
+//Container
+.container {
+  max-width: 1250px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}

@@ -1,0 +1,106 @@
+
+//Single Post Page
+.single-post {
+  .blog-content {
+    p {
+      text-align: justify;
+    }
+  }
+}
+.related-post-slider {
+  .post-item-img {
+    img {
+      height: auto !important;
+    }
+  }
+  .carousel-buttons .prev-btn, .carousel-buttons .next-btn{
+    top: 35%;
+  }
+}
+
+
+//Blog Comments
+.blog-comment-section {
+  .section-separator {
+    margin: 1.5rem 0;
+  }
+
+  .user-comments-item {
+    display: flex;
+    .user-img {
+      margin-right: 1rem;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 4px 4px #333;
+      }
+    }
+  }
+
+  .comment-block-top {
+    display: flex;
+    margin-bottom: .5rem;
+    .user-name {
+      font-size: 1rem;
+    }
+    .comment-date-time {
+      padding-left: .5rem;
+      margin-top: 6px;
+      font-size: 0.625rem;
+    }
+  }
+
+  .comment-block-content {
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .comment-reply {
+    margin-top: .5rem;
+    a {
+      font-size: 0.75rem;
+      color: $secondary-color;
+      &:hover {
+        color: $primary-color !important;
+      }
+      i {
+        font-size: 0.625rem;
+      }
+    }
+  }
+
+  .user-sub-comment-block {
+    padding-left: 4.4rem;
+    .user-img {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .comment-box {
+    @include bordered($color: $sidebar-widget-bg-color);
+    padding: 1.5rem;
+
+    .account-section, .account-section-left, .comment-box-bottom  {
+      align-items: center;
+    }
+
+    .comment-box-bottom {
+      background: $sidebar-widget-bg-color;
+      padding: 1rem;
+      .comment-box-bottom-left {
+        .form-btn {
+          margin-right: 0.5rem;
+          &:hover {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}

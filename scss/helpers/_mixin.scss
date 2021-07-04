@@ -1,0 +1,73 @@
+
+//Set Background-Color and Text-color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+
+//Transition
+@mixin set-transition($area: all, $time: .3s, $type: ease-in-out) {
+  transition: $area $time $type;
+}
+
+//Border
+@mixin bordered($color: $primary-color, $width: 1px) {
+  border: $width solid $color;
+}
+@mixin bordered-left($color: $primary-color, $width: 1px) {
+  border-left: $width solid $color;
+}
+@mixin bordered-right($color: $primary-color, $width: 1px) {
+  border-right: $width solid $color;
+}
+@mixin bordered-top($color: $primary-color, $width: 1px) {
+  border-top: $width solid $color;
+}
+@mixin bordered-bottom($color: $primary-color, $width: 1px) {
+  border-bottom: $width solid $color;
+}
+
+
+//Display Flex
+@mixin display-flex($justify-content: space-between) {
+  display: flex;
+  justify-content: $justify-content;
+}
+
+//Display Grid
+@mixin display-grid($place-content: center) {
+  display: grid;
+  place-content: $place-content;
+}
+
+//Overlay
+//Background Overlay
+@mixin bg-overlay($bg-overlay-color: #5d5656) {
+  background-color: $bg-overlay-color !important;
+  background-blend-mode: overlay;
+  &:hover {
+    background-color: $bg-overlay-hover-color !important;
+  }
+}
+
+
+
+
+
+
+//Border
+//$spaceamounts: (1, 2, 3, 4, 5);
+//$sides: (top, bottom, left, right);
+
+//@each $space in $spaceamounts {
+//@each $side in $sides {
+//.b-#{$space} {
+//border: #{$space}px solid #fff;
+//}
+
+//.b-#{$side}-#{$space} {
+//border-#{$side}: #{$space}px solid #fff;
+//}
+//}
+//}

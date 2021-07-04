@@ -1,0 +1,23 @@
+
+.small-heading, .large-heading, .x-large-heading {
+  line-height: $default-line-height;
+  font-weight: bold;
+}
+.small-heading {
+  font-size: 1rem;
+}
+
+.large-heading {
+  font-size: 1.5rem;
+}
+
+.x-large-heading {
+  font-size: 2rem;
+}
+
+.small-heading a, .large-heading a, .x-large-heading a {
+  color: $secondary-color;
+}
+.small-heading a:hover, .large-heading a:hover, .x-large-heading a:hover {
+  color: $primary-color !important;
+}

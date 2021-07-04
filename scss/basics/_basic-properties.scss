@@ -1,0 +1,127 @@
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $default-text-color;
+  min-height: 100vh;
+  background: url("../images/body_bg.jpg") center center / contain;
+}
+
+//Properties
+a{
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
+
+.active {
+  color: $primary-color !important;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  filter: brightness(1);
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+//Text Alignment
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: end;
+}
+
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  background: $white-color;
+  padding: 10px;
+  color: $default-text-color;
+  font-weight: bold;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:focus {
+    box-shadow: 1px 2px 10px #d6d4d4c9;
+  }
+}
+textarea {
+  width: 100%;
+  padding: 15px;
+  @include bordered($color: $sidebar-widget-bg-color);
+  &::placeholder {
+    color: $placeholder-color;
+  }
+  &:focus {
+    box-shadow: 1px 2px 10px #d6d4d4c9;
+    @include bordered($color: $grey-color);
+    outline: none;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  font: {
+    size: 14px;
+    weight: bold;
+  }
+  background: $primary-color;
+  color: $white-color;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+input[type="submit" i], input[type="button"], button, a, .btn {
+  cursor: pointer;
+}
+
+.o-hidden {
+  overflow: hidden;
+}
+
+//Position
+.p-relative {
+  position: relative;
+}
+
+//Height
+.h-auto {
+  height: auto !important;
+}
+
+//Transition
+a, img, input, textarea, button, .btn, :before, :after {
+  @include set-transition();
+}

@@ -1,0 +1,177 @@
+
+
+
+@media only screen and (min-width: 801px) { 
+    .navigation {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+ 
+//Basic CSS
+.page-container {
+    margin: 0 !important;
+}
+.flex-w-7 {
+    max-width: 100%;
+}
+.res-d-block {
+    display: block !important;     
+}
+.res-text-center {
+    text-align: center !important;
+}
+.res-m-b-1 {
+    margin-bottom: 1rem !important;
+}
+.res-h-auto {
+    height: auto !important;
+}
+.large-heading {
+    font-size: 1rem;
+}
+.small-heading {
+    font-size: 0.625rem;
+}
+.blog-meta {
+    font-size: 0.5rem !important;
+}
+p {
+    font-size: 0.625rem !important;
+}
+.d-flex {
+    gap: 10px !important;
+}
+.separator-heading {
+    .section-heading {
+        &::before {
+            top: 24px;
+        }
+}
+}
+
+
+//Home Page
+.main-header {
+    .header-top-bar-content {
+        font-size: .625rem !important;
+
+        .social-icons {
+            justify-content: center !important;
+        }
+        .top-bar-block {
+            width: 100%;
+            .top-bar-items {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .main-menu {
+        display: none !important;
+    }
+}
+.home-banner-section {
+    .banner-items {
+        grid-template-areas:
+        "item1 item1 item1 item1"
+        "item1 item1 item1 item1"
+        "item2 item2 item2 item2"
+        "item3 item3 item4 item4" !important;
+    }
+}
+.personalities-banner {
+    padding: 3rem;
+}
+
+
+//Footer
+.footer {
+.footer-content-area {
+    gap: 30px;
+    .footer-widget {
+      flex: 100% !important;
+      max-width: 100% !important;
+      padding-left: 0 !important;
+    } 
+  }
+  .footer-bottom {
+    .footer-menu {
+        justify-content: space-evenly !important;
+    }   
+  }
+ .separator-heading {
+    .section-heading {
+        &:before {
+          top: 23px !important;
+        }
+    }
+ }
+}
+
+
+//Sidebar
+.content-sidebar {
+    flex-wrap: wrap;
+}
+.sidebar {
+    margin-left: 0 !important;
+    margin-top: 5rem;
+
+    .sidebar-post-bg {
+        height: 20vh !important;
+    }
+}
+
+
+//Blog Page
+.post-item {
+    img {
+        height: auto !important;
+    }
+    .blog-content .d-flex {
+    flex-wrap: wrap;
+}
+}
+
+
+//Single Post
+.blog-content {
+    .d-flex {
+        flex-wrap: wrap;
+    }
+}
+.user-comments {
+    padding: 1rem 0 !important;
+}
+.blog-comment-section {
+    .user-sub-comment-block {
+        padding-left: 2rem;
+    }
+}
+.account-section {
+    flex-wrap: wrap;
+    .account-section-left {
+        display: block !important;
+    }
+    img {
+        max-width: 50px;
+    }
+}
+
+
+//Categories Page
+.categories-item {
+    padding: 5rem 1rem !important;
+}
+
+
+//Contact Page
+.google-map {
+    margin-bottom: 3rem !important;
+}
+
+
+
+}

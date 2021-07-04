@@ -1,0 +1,49 @@
+
+//Contact Info
+.contact-info {
+  display: grid;
+  place-content: center;
+  text-align: center;
+
+  .contact-item {
+    @include bordered($color: #f6f6f77a);
+    padding: 2rem;
+    @include set-transition();
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    i{
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: #e7e7ec;
+    }
+    .contact-heading {
+      font-size: 1.5rem;
+      a {
+        color: #525d71;
+        &:hover {
+          color: $primary-color !important;
+        }
+      }
+    }
+
+    &:hover {
+      @include bordered($color: #525d71);
+      i {
+        color: #525d71;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+//Google Map
+.google-map {
+  margin-bottom: -6px;
+}

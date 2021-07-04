@@ -1,0 +1,71 @@
+
+
+.login-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  position: relative;
+  @include bordered($color: $sidebar-widget-bg-color);
+
+  .login-img {
+    display: grid;
+    place-self: center;
+  }
+  .login-form {
+    background: #7C0029;
+    display: grid;
+    padding: 2rem 2rem 1rem;
+    img {
+      max-width: 100px;
+      margin-bottom: 1.5rem;
+      place-self: center;
+    }
+    .form-item {
+      margin-bottom: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+      label {
+        display: block;
+        color: $white-color;
+        padding-bottom: .5rem;
+      }
+      .form-control {
+        display: flex;
+        i {
+          color: #fff;
+          font-size: 0.875rem;
+          padding: 10px 14px;
+          @include bordered($color: #922b4d);
+          border-right: none;
+        }
+        input, textarea {
+          background: transparent;
+          color: $white-color;
+          @include bordered($color: #922b4d);
+          width: 100% !important;
+        }
+        .account-submit-btn {
+          background: #922b4d !important;
+          &:hover {
+            background: $secondary-color !important;
+          }
+        }
+      }
+    }
+    a, .form-bottom {
+      color: $white-color;
+      font-size: .725rem;
+      font-weight: 500;
+      &:hover {
+        color: $light-color !important;
+      }
+    }
+    .form-bottom {
+      a {
+        color: #6c63ff;
+        font-weight: bold;
+      }
+    }
+  }
+}
