@@ -73,6 +73,9 @@
         padding-right: 1rem;
         font-weight: normal;
         color: $white-color;
+        &:hover {
+          color: #bbb7b7 !important;
+        }
       }
 
     }

@@ -122,6 +122,6 @@ input[type="submit" i], input[type="button"], button, a, .btn {
 }
 
 //Transition
-a, img, input, textarea, button, .btn, :before, :after {
+a, img, input, textarea, button, .btn {
   @include set-transition();
 }

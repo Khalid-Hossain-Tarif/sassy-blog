@@ -921,7 +921,7 @@ input[type="submit" i], input[type="button"], button, a, .btn {
   height: auto !important;
 }
 
-a, img, input, textarea, button, .btn, :before, :after {
+a, img, input, textarea, button, .btn {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -960,7 +960,9 @@ a, img, input, textarea, button, .btn, :before, :after {
   position: relative;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "item1 item1 item2 item2" "item1 item1 item2 item2" "item1 item1 item3 item4";
+      grid-template-areas: "item1 item1 item2 item2"
+ "item1 item1 item2 item2"
+ "item1 item1 item3 item4";
   -ms-grid-columns: 50% 1fr;
       grid-template-columns: 50% 1fr;
   -ms-grid-rows: 16vw 1fr;
@@ -1564,7 +1566,10 @@ a, img, input, textarea, button, .btn, :before, :after {
     display: none !important;
   }
   .home-banner-section .banner-items {
-        grid-template-areas: "item1 item1 item1 item1" "item1 item1 item1 item1" "item2 item2 item2 item2" "item3 item3 item4 item4" !important;
+        grid-template-areas: "item1 item1 item1 item1"
+ "item1 item1 item1 item1"
+ "item2 item2 item2 item2"
+ "item3 item3 item4 item4" !important;
   }
   .personalities-banner {
     padding: 3rem;
@@ -1698,6 +1703,10 @@ a, img, input, textarea, button, .btn, :before, :after {
   padding-right: 1rem;
   font-weight: normal;
   color: #fff;
+}
+
+.main-header .header-top-bar .header-top-bar-content a:hover {
+  color: #bbb7b7 !important;
 }
 
 .main-header .navigation-block {
